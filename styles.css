@@ -1,47 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CONFIG</title>
-  <link rel="stylesheet" href="styles.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playwrite+HR+Lijeva:wght@100..400&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="container">
-    <header class="header">
-      <h1>CONGIF in CurseForge</h1>
-    </header>
-    <main>
-      <section class="category">
-        <h2>MODs</h2>
-        <div class="link-list">
-          <a href="https://www.curseforge.com/minecraft/mc-mods/litematica-forge">⬇ Litematica</a>
-          <a href="https://www.curseforge.com/minecraft/mc-mods/malilib-forge">⬇ MaLiLib</a>
-          <a href="https://www.curseforge.com/minecraft/mc-mods/voxelmap">⬇ VoxelMap</a>
-          <a href="https://www.curseforge.com/minecraft/mc-mods/essential-mod">⬇ Essential</a>
-          <a href="https://www.curseforge.com/minecraft/mc-mods/oculus">⬇ Oculus</a>
-          <a href="https://www.curseforge.com/minecraft/mc-mods/embeddium">⬇ Embeddium</a>
-        </div>
-      </section>
-      <section class="category">
-        <h2>ResoursePacks</h2>
-        <div class="link-list">
-          <a href="https://www.curseforge.com/minecraft/texture-packs/conquest_">⬇ Conquest</a>
-        </div>
-      </section>
-      <section class="category">
-        <h2>Shaders</h2>
-        <div class="link-list">
-          <a href="https://www.curseforge.com/minecraft/shaders/bsl-shaders">⬇ BSL</a>
-          
-        </div>
-      </section>
-    </main>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
+body {
+  font-family: Arial, sans-serif;
+  background: url('minecraft-20240929-312598-002-1_waifu2x_art_noise3_scale.png') no-repeat center center fixed; 
+  background-size: cover;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 36px;
+  color: #ffffff;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+
+.category {
+  margin-bottom: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.category h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #e9e9e9;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+}
+.link-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.link-list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #e9e9e9;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.link-list a:hover {
+  background-color: #181818;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
+  opacity: 0;
+  transform: translateY(-50px); 
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+
+.container.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playwrite+HR+Lijeva:wght@100..400&display=swap');
